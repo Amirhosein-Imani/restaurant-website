@@ -1,0 +1,220 @@
+/* ---------- GOOGLE FONTS ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: #f95555;
+    --primary-color-dark: #bb0811;
+    --text-dark: #171717;
+    --text-light: #737373;
+    --light: #e5e5e5;
+    --extra-light: #fdfaf6;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.section__header span {
+    position: relative;
+    isolation: isolate;
+}
+
+.section__header span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    border-bottom: 4px solid var(--primary-color);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Poppins" , sans-serif;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px 20px 5px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+html , body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins" , sans-serif;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.nav__logo a img {
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 100%;
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.nav__links.open {
+    transform: translateY(100%);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(white);
+    white-space: nowrap;
+}
+
+.nav__btns {
+    display: none;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+
+@media (width > 768px) {
+
+
+    /* ---------- NAVBAR ---------- */
+
+
+    nav {
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav__links a {
+        color: var(--text-dark);
+    }
+
+    .nav__links a:hover {
+        color: var(--primary-color);
+    }
+
+    .nav__btns {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .nav__btns .btn {
+        padding: 4px 10px;
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        background-color: transparent;
+        border-radius: 100%;
+        border: none;
+    }
+
+    .nav__btns .btn:hover {
+        box-shadow: 0px 0px 20px rgba(249, 85, 85, 0.3);
+    }
+
+}
