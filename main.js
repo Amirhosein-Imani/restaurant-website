@@ -20,3 +20,53 @@ navLinks.addEventListener("click" , (e) => {
 
 })
 
+
+
+
+const scrollRevealOption = {
+
+    distance: "50px" , origin: "bottom" , duration: 1000 ,
+
+}
+
+ScrollReveal().reveal(".header__image .image img" , {
+
+    ...scrollRevealOption ,
+
+})
+
+ScrollReveal().reveal(".header__top" , {
+
+    ...scrollRevealOption , delay: 500 ,
+
+})
+
+ScrollReveal().reveal(".header__content h1" , {
+
+    ...scrollRevealOption , delay: 1000 ,
+
+})
+
+ScrollReveal().reveal(".header__content p" , {
+
+    ...scrollRevealOption , delay: 1500 ,
+
+})
+
+ScrollReveal().reveal(".header__btns" , {
+
+    ...scrollRevealOption , delay: 2000 ,
+
+})
+
+ScrollReveal().reveal(".header__card" , {
+
+    ...scrollRevealOption , delay: 2500 , interval: 500 ,
+
+})
+
+ScrollReveal().reveal(".header__image__footer" , {
+
+    ...scrollRevealOption , delay: 4000 ,
+
+})
