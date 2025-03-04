@@ -508,6 +508,37 @@ nav {
     color: var(--primary-color);
 }
 
+/* ---------- BANNER SECTION ---------- */
+
+
+.banner {
+    background-color: var(--extra-light);
+}
+
+.banner__container {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.banner__container img {
+    max-width: 500px;
+    margin-inline: auto;
+    border-radius: 5rem 2rem 5rem 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.banner__content .section__header {
+    margin-bottom: 2rem;
+}
+
+.banner__content p {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: var(--text-light);
+    line-height: 1.75rem;
+}
+
 
 /* ---------- MEDIA QUERIES ---------- */
 
@@ -646,6 +677,19 @@ nav {
 
     .service__grid {
         grid-template-columns: repeat(3 , 1fr);
+    }
+
+
+    /* ---------- BANNER SECTION ---------- */
+
+
+    .banner__container {
+        grid-template-columns: repeat(2 , 1fr);
+        align-items: center;
+    }
+
+    .banner__content {
+        grid-area: 1/1/2/2;
     }
 
 }

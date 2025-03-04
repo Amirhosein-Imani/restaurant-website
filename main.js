@@ -94,3 +94,30 @@ ScrollReveal().reveal(".service__card" , {
     ...scrollRevealOption , interval: 500 ,
 
 })
+
+
+
+
+ScrollReveal().reveal(".banner__image img" , {
+
+    ...scrollRevealOption , origin: "right" ,
+
+})
+
+ScrollReveal().reveal(".banner__content .section__header" , {
+
+    ...scrollRevealOption , delay: 500 ,
+
+})
+
+ScrollReveal().reveal(".banner__content p" , {
+
+    ...scrollRevealOption , delay: 1000 ,
+
+})
+
+ScrollReveal().reveal(".banner__btn" , {
+
+    ...scrollRevealOption , delay: 1500 ,
+
+})
