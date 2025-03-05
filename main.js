@@ -121,3 +121,24 @@ ScrollReveal().reveal(".banner__btn" , {
     ...scrollRevealOption , delay: 1500 ,
 
 })
+
+
+
+
+ScrollReveal().reveal(".customer__image img" , {
+
+    ...scrollRevealOption , origin: "left" ,
+
+})
+
+const swiper = new Swiper (".swiper" , {
+
+    loop: true , 
+    
+    navigation: {
+
+        nextEl: ".swiper-next" , prevEl: ".swiper-prev" ,
+
+    } 
+
+})

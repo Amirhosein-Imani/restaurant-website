@@ -540,6 +540,143 @@ nav {
 }
 
 
+/* ---------- CUSTOMER SECTION ---------- */
+
+
+.customer__container {
+    display: grid;
+    gap: 2rem;
+}
+
+.customer__image {
+    position: relative;
+    isolation: isolate;
+}
+
+.customer__image::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    left: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.customer__image img {
+    max-width: 550px;
+    margin-inline: auto;
+}
+
+.customer__content {
+    overflow: hidden;
+}
+
+.swiper {
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.customer__card {
+    padding: 1rem;
+    border: 2px solid var(--light);
+    border-radius: 1rem;
+}
+
+.customer__card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.customer__card__header div {
+    padding: 2px 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #20604e;
+    background-color: #ecfdf5;
+    border-radius: 1rem;
+}
+
+.customer__card__header span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.customer__card p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+.customer__card__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer__card__footer img {
+    max-width: 70px;
+    border-radius: 100%;
+    border: 8px solid var(--white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.customer__card__footer > div {
+    padding-left: 1rem;
+    border-left: 2px solid var(--primary-color);
+}
+
+.customer__card__footer h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.customer__card__footer h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.customer__rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.customer__rating span {
+    color: goldenrod;
+}
+
+.customer__swiper__controls {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer__swiper__controls .btn {
+    padding: 5px 1.5rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--text-dark);
+    border-color: var(--light);
+}
+
+.customer__swiper__controls .btn:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
 /* ---------- MEDIA QUERIES ---------- */
 
 
@@ -690,6 +827,31 @@ nav {
 
     .banner__content {
         grid-area: 1/1/2/2;
+    }
+
+
+    /* ---------- CUSTOMER SECTION ---------- */
+
+
+    .customer__container {
+        grid-template-columns: repeat(2 , 1fr);
+        align-items: center;
+    }
+
+    .customer__card {
+        padding: 1.5rem;
+    }
+
+}
+
+
+@media (width > 1024px) {
+
+    /* ---------- CUSTOMER SECTION ---------- */
+
+
+    .customer__card {
+        padding: 2rem;
     }
 
 }
